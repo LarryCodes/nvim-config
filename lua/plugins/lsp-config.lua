@@ -24,6 +24,8 @@ return {
 					"volar",
 					"intelephense",
 					"rust_analyzer",
+          "clangd",
+          "stimulus_ls",
 				},
 			})
 		end,
@@ -73,6 +75,14 @@ return {
 			lsp_config.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
+
+      lsp_config.clangd.setup({
+        capabilities = capabilities,
+      })
+
+      lsp_config.stimulus_ls.setup({
+        capabilities = capabilities,
+      })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
