@@ -1,5 +1,11 @@
 return {
 	{
+		"jwalton512/vim-blade",
+		config = function()
+			vim.cmd([[autocmd BufNewFile,BufRead *.blade.php set filetype=blade]])
+		end,
+	},
+	{
 		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
@@ -24,7 +30,7 @@ return {
 					"volar",
 					"intelephense",
 					"rust_analyzer",
-          "clangd",
+					"clangd",
           "stimulus_ls",
 				},
 			})
@@ -70,15 +76,22 @@ return {
 
 			lsp_config.intelephense.setup({
 				capabilities = capabilities,
+				settings = {
+					intelephense = {
+						files = {
+							associations = { "*.php", "*.blade.php" },
+						},
+					},
+				},
 			})
 
 			lsp_config.rust_analyzer.setup({
 				capabilities = capabilities,
 			})
 
-      lsp_config.clangd.setup({
-        capabilities = capabilities,
-      })
+			lsp_config.clangd.setup({
+				capabilities = capabilities,
+			})
 
       lsp_config.stimulus_ls.setup({
         capabilities = capabilities,
