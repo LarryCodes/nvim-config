@@ -9,3 +9,4 @@ This repository showcases the Neovim configuration I currently use for my day-to
 # Plugins
 
 - Package (Plugin) Manager: [Lazy.nvim](https://www.lazyvim.org/)
+- Tabline Plugin: [barbar.nvim](https://github.com/romgrk/barbar.nvim)
