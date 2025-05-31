@@ -8,9 +8,13 @@ This repository showcases the Neovim configuration I currently use for my day-to
 ## Basic Setup
 
 This configuration uses:
-- Space as the leader key
-- 2-space indentation
-- Line numbers enabled
+- Space as the leader key (`vim.g.mapleader = " "`)
+- Line numbers enabled (`set number`)
+- Smart indentation settings:
+  - Tabs expanded to spaces (`set expandtab`)
+  - Tab width of 2 spaces (`set tabstop=2`)
+  - Soft tabstop of 2 spaces (`set softtabstop=2`)
+  - Auto-indent of 2 spaces (`set shiftwidth=2`)
 
 ## Plugin Management
 
@@ -41,6 +45,10 @@ This configuration uses:
 ### Code Editing and Navigation
 
 - [Comment.nvim](https://github.com/numToStr/Comment.nvim): Provides smart commenting functionality for multiple languages.
+
+- [nvim-autopairs](https://github.com/windwp/nvim-autopairs): Automatically inserts matching pairs of brackets, quotes, and parentheses as you type. Configured to load on InsertEnter for better performance.
+
+- [which-key.nvim](https://github.com/folke/which-key.nvim): Displays a popup with possible keybindings when you pause after typing a prefix key. Access buffer-local keymaps with `<leader>?`. Helps discover and remember complex key combinations.
 
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): Provides advanced syntax highlighting and code parsing for better code understanding and navigation. Configured to auto-install parsers for opened file types.
 
