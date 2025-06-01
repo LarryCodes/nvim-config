@@ -1,9 +1,96 @@
 # Larry's Neovim Configuration
 
+<div align="center">
+
+![Neovim Logo](https://neovim.io/logos/neovim-logo-300x87.png)
+
+*My personal, Lua-based configuration for Neovim*
+
+</div>
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Screenshots](#screenshots)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Basic Setup](#basic-setup)
+- [Project Structure](#project-structure)
+- [Plugin Management](#plugin-management)
+- [Plugins](#plugins)
+  - [User Interface](#user-interface)
+  - [Color Schemes](#color-schemes)
+  - [Code Editing and Navigation](#code-editing-and-navigation)
+  - [Git Integration](#git-integration)
+  - [Language Support and Completion](#language-support-and-completion)
+  - [Autocompletion](#autocompletion)
+- [Key Mappings](#key-mappings)
+- [LSP Servers](#lsp-servers)
+- [Performance Optimization](#performance-optimization)
+- [Troubleshooting](#troubleshooting)
+- [Future Plans](#future-plans)
+- [License](#license)
+
+## Introduction
+
 This repository showcases the Neovim configuration I currently use for my day-to-day work—and, quite honestly, serves as a backup in case I need to start from scratch.
+
 *Setting up Neovim is like trying to build a spaceship out of Lego pieces while blindfolded: the endless sea of plugins is equal parts thrilling and overwhelming. Arriving at a configuration that doesn't make you want to toss your keyboard out the window? That's a journey of trial, error, and a pinch of masochism.*
 
 **Fair warning**: I'm still fairly new to Neovim (less than six months in), so this configuration is basic—covering just the essentials I need for now. As I get more comfortable and explore Neovim's vast capabilities, this setup will likely evolve, growing alongside my understanding and workflow.
+
+## Screenshots
+
+<!-- Replace these placeholders with actual screenshots of your setup -->
+
+<details>
+<summary>Click to see screenshots</summary>
+
+### Main Editor View
+*Coming soon*
+
+### LSP in Action
+*Coming soon*
+
+### Telescope File Finder
+*Coming soon*
+
+</details>
+
+## Requirements
+
+- Neovim >= 0.8.0 (0.9+ recommended)
+- Git
+- A [Nerd Font](https://www.nerdfonts.com/) for proper icon display
+- Node.js and npm (for certain LSP servers)
+- Ripgrep (for Telescope live grep functionality)
+- A terminal with true color support
+
+## Installation
+
+1. **Backup your existing Neovim configuration** (if you have one):
+
+```bash
+# Backup existing configuration
+mv ~/.config/nvim ~/.config/nvim.bak
+
+# Also backup Neovim data directory if it exists
+[ -d ~/.local/share/nvim ] && mv ~/.local/share/nvim ~/.local/share/nvim.bak
+```
+
+2. **Clone this repository**:
+
+```bash
+git clone https://github.com/LarryCodes/nvim-config.git ~/.config/nvim
+```
+
+3. **Start Neovim**:
+
+```bash
+nvim
+```
+
+On first launch, [lazy.nvim](https://github.com/folke/lazy.nvim) will automatically install all the configured plugins.
 
 ## Basic Setup
 
@@ -15,6 +102,25 @@ This configuration uses:
   - Tab width of 2 spaces (`set tabstop=2`)
   - Soft tabstop of 2 spaces (`set softtabstop=2`)
   - Auto-indent of 2 spaces (`set shiftwidth=2`)
+
+## Project Structure
+
+```
+.
+├── init.lua                 # Main entry point that loads lazy.nvim and plugins
+├── lazy-lock.json          # Plugin version lockfile
+├── lua/
+│   ├── vim-options.lua     # Basic Vim settings
+│   └── plugins/            # Plugin configurations
+│       ├── barbar.lua      # Buffer management
+│       ├── color-schemes.lua # Theme configurations
+│       ├── comment.lua     # Code commenting
+│       ├── completions.lua # Autocompletion setup
+│       ├── ...
+└── nvim/                   # Additional configurations
+```
+
+Each plugin's configuration is modularized in its own file for better organization and maintainability.
 
 ## Plugin Management
 
@@ -120,3 +226,71 @@ This configuration automatically installs and configures the following language 
 - `rust_analyzer`: Rust
 - `clangd`: C/C++
 - `stimulus_ls`: Stimulus JS
+
+## Performance Optimization
+
+I've focused on optimizing performance in my configuration through several strategies:
+
+1. **Lazy Loading**: Most plugins are configured to load only when needed using lazy.nvim's event system
+   - Example: nvim-autopairs loads only on `InsertEnter`
+   - Example: which-key loads on `VeryLazy` event
+
+2. **Minimal Core**: The base configuration avoids unnecessary settings and keeps the core lightweight
+
+3. **Modular Structure**: Each plugin is configured in its own file, making it easier to disable or modify specific components
+
+## Troubleshooting
+
+### Issues I've Encountered
+
+#### Plugin Installation Failures
+
+If plugins fail to install properly:
+
+```bash
+# Remove the plugin cache and reinstall
+rm -rf ~/.local/share/nvim/lazy
+nvim
+```
+
+#### LSP Server Issues
+
+If an LSP server isn't working correctly:
+
+1. Check if it's installed via `:Mason`
+2. Reinstall the server if needed
+3. Check the logs with `:LspInfo` and `:LspLog`
+
+#### Treesitter Parser Problems
+
+For syntax highlighting issues:
+
+```
+:TSInstallInfo    # See installed parsers
+:TSInstall <lang> # Install a specific parser
+:TSUpdate         # Update parsers
+```
+
+## Future Plans
+
+Features I'm planning to add to my configuration:
+
+- [ ] Add debugging support with nvim-dap
+- [ ] Improve my git workflow integration
+- [ ] Create custom keymaps for my project-specific tasks
+- [ ] Add support for more LSP servers and languages that I work with
+- [ ] Implement session management for quick project resuming
+- [ ] Create a custom dashboard for a nicer startup experience
+
+
+
+## License
+
+My configuration is available under the [MIT License](LICENSE), so feel free to use it as inspiration for your own setup.
+
+---
+
+<div align="center">
+<p>Happy coding with Neovim! 🚀</p>
+<p><i>Last updated: June 2025</i></p>
+</div>
