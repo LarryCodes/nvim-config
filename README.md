@@ -134,7 +134,7 @@ Each plugin's configuration is modularized in its own file for better organizati
 
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim): A fast and customizable statusline plugin written in Lua that displays useful information about the current file, mode, git status, and more.
 
-- [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim): A file explorer that provides a tree view of your project files and directories, accessible with `<C-n>`. Configured to show hidden and gitignored files.
+- [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim): A file explorer that provides a tree view of your project files and directories. Opens automatically on startup (when no file is specified) and can be toggled with `<C-n>`. Configured to show hidden and gitignored files.
 
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons): Adds file type icons to Neovim plugins such as Neo-tree and Barbar.
 

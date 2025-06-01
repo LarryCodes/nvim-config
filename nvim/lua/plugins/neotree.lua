@@ -14,8 +14,29 @@
             hide_dotfiles = false,
             hide_gitignored = false,
           }
-        }
+        },
+        window = {
+          width = 30,
+          auto_expand_width = false,
+        },
+        default_component_configs = {
+          indent = {
+            padding = 0,
+          },
+        },
       })
-      vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal left<CR>')
+      
+      -- Keep the shortcut for toggling Neo-tree
+      vim.keymap.set('n', '<C-n>', ':Neotree toggle<CR>', { silent = true })
+      
+      -- Auto-open Neo-tree when Neovim starts
+      vim.api.nvim_create_autocmd("VimEnter", {
+        callback = function()
+          -- Only open automatically if we're not opening a specific file
+          if vim.fn.argc() == 0 then
+            vim.cmd("Neotree filesystem reveal left")
+          end
+        end
+      })
     end
   }
