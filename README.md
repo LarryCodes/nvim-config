@@ -156,6 +156,14 @@ Each plugin's configuration is modularized in its own file for better organizati
 
 - [which-key.nvim](https://github.com/folke/which-key.nvim): Displays a popup with possible keybindings when you pause after typing a prefix key. Access buffer-local keymaps with `<leader>?`. Helps discover and remember complex key combinations.
 
+- [auto-session](https://github.com/rmagatti/auto-session): Automatically saves and restores sessions when entering and exiting Neovim. Keybindings include:
+  - `<leader>ls`: Search sessions with Telescope
+  - `<leader>sd`: Delete session
+  - `<leader>sr`: Restore session
+  - `<leader>ss`: Save session
+
+- [session-lens](https://github.com/rmagatti/session-lens): Telescope extension for auto-session, providing a beautiful UI for searching and managing sessions.
+
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): Provides advanced syntax highlighting and code parsing for better code understanding and navigation. Configured to auto-install parsers for opened file types.
 
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim): A highly extendable fuzzy finder that helps you search for files (`<C-p>`), grep through content (`<leader>fg`), and search for the word under cursor (`<leader>ff`).
@@ -211,6 +219,10 @@ Each plugin's configuration is modularized in its own file for better organizati
 - `K`: Show hover documentation
 - `gd`: Go to definition
 - `<leader>ca`: Code actions
+- `<leader>ls`: Search sessions with Telescope
+- `<leader>sd`: Delete session
+- `<leader>sr`: Restore session
+- `<leader>ss`: Save session
 
 ## LSP Servers
 
@@ -279,7 +291,7 @@ Features I'm planning to add to my configuration:
 - [ ] Improve my git workflow integration
 - [ ] Create custom keymaps for my project-specific tasks
 - [ ] Add support for more LSP servers and languages that I work with
-- [ ] Implement session management for quick project resuming
+- [x] Implement session management for quick project resuming
 - [ ] Create a custom dashboard for a nicer startup experience
 
 
