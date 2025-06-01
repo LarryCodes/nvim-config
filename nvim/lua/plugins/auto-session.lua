@@ -8,8 +8,8 @@ return {
         auto_restore_enabled = true,
         auto_save_enabled = true,
         auto_session_suppress_dirs = { "~/", "~/Downloads", "~/Projects" },
-        pre_save_cmds = { "NeoTreeClose" },
-        post_restore_cmds = { "NeoTreeShow" },
+        pre_save_cmds = { "Neotree close" },
+        post_restore_cmds = { "Neotree filesystem reveal left" },
         session_lens = {
           load_on_setup = true,
           theme_conf = { border = true },
