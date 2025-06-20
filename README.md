@@ -1,10 +1,13 @@
-# Larry's Neovim Configuration
+# 🚀 NeoVim IDE: A Modern Development Environment
 
 <div align="center">
 
 ![Neovim Logo](https://neovim.io/logos/neovim-logo-300x87.png)
 
-*My personal, Lua-based configuration for Neovim*
+*A powerful, Lua-configured Neovim setup that transforms Vim into a full-featured IDE*
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Neovim](https://img.shields.io/badge/Neovim-0.9+-green.svg?logo=neovim)](https://neovim.io/)
 
 </div>
 
