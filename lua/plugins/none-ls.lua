@@ -1,8 +1,8 @@
 return {
 	"nvimtools/none-ls.nvim",
-  dependencies = {
-    "nvimtools/none-ls-extras.nvim",
-  },
+	dependencies = {
+		"nvimtools/none-ls-extras.nvim",
+	},
 	config = function()
 		local null_ls = require("null-ls")
 		null_ls.setup({
@@ -10,7 +10,10 @@ return {
 				null_ls.builtins.formatting.stylua,
 				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.completion.spell,
-		    require('none-ls.diagnostics.eslint_d')
+				null_ls.builtins.formatting.prettier.with({
+					extra_args = { "--tab-width", "2", "--use-tabs", "false" },
+				}),
+				require("none-ls.diagnostics.eslint_d"),
 			},
 		})
 

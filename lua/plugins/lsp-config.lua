@@ -31,7 +31,7 @@ return {
 					"intelephense",
 					"rust_analyzer",
 					"clangd",
-					"stimulus_ls",
+          "stimulus_ls",
 				},
 			})
 		end,
@@ -93,9 +93,9 @@ return {
 				capabilities = capabilities,
 			})
 
-			lsp_config.stimulus_ls.setup({
-				capabilities = capabilities,
-			})
+      lsp_config.stimulus_ls.setup({
+        capabilities = capabilities,
+      })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})

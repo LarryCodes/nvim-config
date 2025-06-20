@@ -61,7 +61,7 @@ return {
 					-- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
 				},
 			})
-			vim.cmd.colorscheme("catppuccin")
+			-- vim.cmd.colorscheme("catppuccin")
 		end,
 	},
 	{
@@ -72,4 +72,12 @@ return {
 			-- vim.cmd.colorscheme("synthweave")
 		end,
 	},
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function ()
+      vim.cmd.colorscheme("tokyonight-night")
+    end
+  }
 }

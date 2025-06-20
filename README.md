@@ -78,13 +78,24 @@ mv ~/.config/nvim ~/.config/nvim.bak
 [ -d ~/.local/share/nvim ] && mv ~/.local/share/nvim ~/.local/share/nvim.bak
 ```
 
-2. **Clone this repository**:
+2. **Clone this repository:**
 
 ```bash
-git clone https://github.com/LarryCodes/nvim-config.git ~/.config/nvim
+git clone https://github.com/LarryCodes/nvim-config.git
 ```
 
-3. **Start Neovim**:
+3. **Move the cloned folder to your Neovim config directory and rename it:**
+
+```bash
+mv nvim-config ~/.config/nvim
+```
+
+> **Notes:**
+> - The folder must be named `nvim` and located at `~/.config/nvim` for Neovim to recognize it.
+> - If you cloned into a different directory, adjust the paths in the commands accordingly.
+> - If you want to make changes to this configuration, please fork the repository first and clone your fork instead.
+
+5. **Start Neovim:**
 
 ```bash
 nvim
@@ -108,16 +119,27 @@ This configuration uses:
 ```
 .
 ├── init.lua                 # Main entry point that loads lazy.nvim and plugins
-├── lazy-lock.json          # Plugin version lockfile
-├── lua/
-│   ├── vim-options.lua     # Basic Vim settings
-│   └── plugins/            # Plugin configurations
-│       ├── barbar.lua      # Buffer management
-│       ├── color-schemes.lua # Theme configurations
-│       ├── comment.lua     # Code commenting
-│       ├── completions.lua # Autocompletion setup
-│       ├── ...
-└── nvim/                   # Additional configurations
+├── lazy-lock.json           # Plugin version lockfile
+├── .luarc.json              # Lua Language Server configuration
+└── lua/
+    ├── vim-options.lua     # Basic Vim settings
+    └── plugins/            # Plugin configurations
+        ├── auto-session.lua # Session management
+        ├── barbar.lua      # Buffer management
+        ├── color-schemes.lua # Theme configurations
+        ├── comment.lua     # Code commenting
+        ├── completions.lua # Autocompletion setup
+        ├── fugitive.lua    # Git integration
+        ├── gitsigns.lua    # Git signs in the gutter
+        ├── indent-blankline.lua # Indentation guides
+        ├── lsp-config.lua  # LSP configuration
+        ├── lualine.lua     # Status line
+        ├── neotree.lua     # File explorer
+        ├── none-ls.lua     # Null-ls configuration
+        ├── nvim-autopairs.lua # Auto-pairing
+        ├── telescope.lua   # Fuzzy finder
+        ├── treesitter.lua  # Syntax highlighting
+        └── which-key.lua   # Keybindings helper
 ```
 
 Each plugin's configuration is modularized in its own file for better organization and maintainability.
