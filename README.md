@@ -142,7 +142,8 @@ This configuration uses:
         ├── nvim-autopairs.lua # Auto-pairing
         ├── telescope.lua   # Fuzzy finder
         ├── treesitter.lua  # Syntax highlighting
-        └── which-key.lua   # Keybindings helper
+        ├── which-key.lua   # Keybindings helper
+        └── codecompanion.lua # AI coding assistant configuration
 ```
 
 Each plugin's configuration is modularized in its own file for better organization and maintainability.
