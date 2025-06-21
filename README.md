@@ -323,14 +323,29 @@ For syntax highlighting issues:
 
 ## Future Plans
 
-Features I'm planning to add to my configuration:
+Planned improvements and features for my Neovim configuration:
 
+### In Progress
 - [ ] Add debugging support with nvim-dap
-- [ ] Improve my git workflow integration
-- [ ] Create custom keymaps for my project-specific tasks
-- [ ] Add support for more LSP servers and languages that I work with
-- [x] Implement session management for quick project resuming
-- [ ] Create a custom dashboard for a nicer startup experience
+- [ ] Create custom keymaps for project-specific tasks
+
+### Upcoming Features
+- [ ] Set up nvim-dap for debugging
+- [ ] Enhance LSP experience with:
+  - [ ] Enable inlay hints for better code understanding
+  - [ ] Add more advanced code actions and refactoring tools
+  - [ ] Improve hover documentation with better markdown formatting
+  - [ ] Configure workspace-specific LSP settings
+  - [ ] Add LSP progress notifications
+- [ ] Create a custom dashboard with project statistics
+- [ ] Implement workspace-specific configurations
+
+### Completed ✓
+- [x] Implement session management with auto-session
+- [x] Set up AI coding assistant with CodeCompanion 🎉
+- [x] Configure Git integration with gitsigns and fugitive
+- [x] Improve documentation and README
+- [x] Optimize startup time with lazy-loading
 
 
 
