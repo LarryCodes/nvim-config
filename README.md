@@ -218,6 +218,18 @@ Each plugin's configuration is modularized in its own file for better organizati
 
 - [vim-blade](https://github.com/jwalton512/vim-blade): Provides syntax highlighting for Laravel Blade templates.
 
+### AI Assistant
+
+- [codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim): AI-powered coding assistant that integrates with Anthropic's Claude 3.5 Sonnet model. Provides chat, code explanations, and code fixes.
+  - `<leader>aia`: Open CodeCompanion Actions
+  - `<leader>aic`: Open CodeCompanion Chat
+  - `<leader>ait`: Toggle CodeCompanion Chat
+  - `<leader>aii`: Open CodeCompanion
+  - Visual mode mappings:
+    - `<leader>aie`: Explain selected code
+    - `<leader>aicm`: Generate commit message
+    - `<leader>aif`: Fix selected code
+
 ### Autocompletion
 
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp): A completion engine plugin for Neovim that provides an intelligent and customizable completion experience.
