@@ -62,12 +62,35 @@ This repository showcases the Neovim configuration I currently use for my day-to
 
 ## Requirements
 
+### Core Requirements
 - Neovim >= 0.8.0 (0.9+ recommended)
 - Git
 - A [Nerd Font](https://www.nerdfonts.com/) for proper icon display
 - Node.js and npm (for certain LSP servers)
 - Ripgrep (for Telescope live grep functionality)
 - A terminal with true color support
+- C compiler (gcc/clang) - Required for Treesitter parser compilation
+- AI provider credentials - CodeCompanion.nvim requires API credentials for your chosen provider (Anthropic Claude, OpenAI, or others). Alternatively, it supports locally hosted LLMs via Ollama. See [CodeCompanion documentation](https://github.com/olimorris/codecompanion.nvim) for all supported options.
+
+### Optional Enhancements
+- fd - Improves Telescope file finding performance
+- fzf - Alternative fuzzy finder that can enhance Telescope
+
+### Language-Specific Requirements
+Depending on your development needs, you might need to install:
+- Rust toolchain (for rust_analyzer)
+- PHP (for intelephense)
+- C/C++ toolchain (for clangd)
+- TypeScript/JavaScript tooling
+
+### Formatters and Linters
+The none-ls.nvim integration supports various formatters and linters. The specific ones you'll need depend on your projects, but may include:
+- prettier (for JavaScript/TypeScript/CSS/HTML)
+- eslint (for JavaScript/TypeScript)
+- stylua (for Lua)
+- black (for Python)
+
+> **Note**: The language-specific requirements and formatters/linters listed above reflect my current workflow needs. As you adapt this configuration to your own projects, you may need to install additional tools or remove unnecessary ones.
 
 ## Installation
 
