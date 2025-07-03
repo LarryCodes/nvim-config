@@ -26,7 +26,7 @@ return {
           anthropic = function()
             return require("codecompanion.adapters").extend("anthropic", {
               env = {
-                api_key ="ANTHROPIC_API_KEY", -- Set this in environment variables
+                api_key ="ANTHROPIC_API_KEY",
               }
             })
           end
@@ -90,4 +90,3 @@ return {
     ft = { "markdown", "codecompanion" }
   }
 }
-

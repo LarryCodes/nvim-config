@@ -13,7 +13,7 @@ return {
 				null_ls.builtins.formatting.prettier.with({
 					extra_args = { "--tab-width", "2", "--use-tabs", "false" },
 				}),
-				require("none-ls.diagnostics.eslint_d"),
+				require("none-ls.diagnostics.eslint"),
 			},
 		})
 

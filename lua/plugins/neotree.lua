@@ -13,11 +13,15 @@
             visible = true,
             hide_dotfiles = false,
             hide_gitignored = false,
+          },
+          follow_current_file = {
+            enabled = false,
           }
         },
         window = {
           width = 30,
           auto_expand_width = false,
+          position="left",
         },
         default_component_configs = {
           indent = {
