@@ -88,7 +88,7 @@ The none-ls.nvim integration supports various formatters and linters. The specif
 - prettier (for JavaScript/TypeScript/CSS/HTML)
 - eslint (for JavaScript/TypeScript)
 - stylua (for Lua)
-- black (for Python)
+- black (for Python) — included via none-ls.nvim
 
 > **Note**: The language-specific requirements and formatters/linters listed above reflect my current workflow needs. As you adapt this configuration to your own projects, you may need to install additional tools or remove unnecessary ones.
 
@@ -244,7 +244,8 @@ Each plugin's configuration is modularized in its own file for better organizati
 
 ### AI Assistant
 
-- [codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim): AI-powered coding assistant that integrates with Anthropic's Claude 3.5 Sonnet model. Provides chat, code explanations, and code fixes.
+- [codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim): AI-powered coding assistant that integrates with Anthropic's Claude Sonnet 4 (20250514) model (and supports others). Provides chat, code explanations, and code fixes. 
+  - **Note:** The model used is configurable. By default, this config uses Claude Sonnet 4 for chat and inline strategies (see `lua/plugins/codecompanion.lua`).
   - `<leader>aia`: Open CodeCompanion Actions
   - `<leader>aic`: Open CodeCompanion Chat
   - `<leader>ait`: Toggle CodeCompanion Chat
@@ -380,5 +381,5 @@ My configuration is available under the [MIT License](LICENSE), so feel free to 
 
 <div align="center">
 <p>Happy coding with Neovim! 🚀</p>
-<p><i>Last updated: June 2025</i></p>
+<p><i>Last updated: July 2025</i></p>
 </div>
