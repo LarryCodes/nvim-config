@@ -12,7 +12,8 @@ return {
           chat = {
             adapter = {
               name = "anthropic",
-              model = "claude-3-7-sonnet-20250219",
+              --model = "claude-3-7-sonnet-20250219",
+              model = "claude-sonnet-4-20250514", 
             },
           },
           inline = {
