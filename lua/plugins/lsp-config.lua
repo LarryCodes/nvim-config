@@ -26,7 +26,7 @@ return {
 					"cssmodules_ls",
 					"css_variables",
 					"tailwindcss",
-					"ts_ls",
+					"tsserver",
 					"volar",
 					"intelephense",
 					"rust_analyzer",
@@ -67,7 +67,7 @@ return {
 				capabilities = capabilities,
 			})
 
-			lsp_config.ts_ls.setup({
+			lsp_config.tsserver.setup({
 				capabilities = capabilities,
 			})
 

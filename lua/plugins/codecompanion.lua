@@ -13,20 +13,21 @@ return {
             adapter = {
               name = "anthropic",
               --model = "claude-3-7-sonnet-20250219",
-              model = "claude-sonnet-4-20250514", 
+              model = "claude-sonnet-4-20250514",
             },
           },
           inline = {
             adapter = {
               name = "anthropic",
-              model = "claude-3-7-sonnet-20250219"
+              -- model = "claude-3-7-sonnet-20250219"
+              model = "claude-sonnet-4-20250514",
             },
           }
         },
         adapters = {
           anthropic = function()
             return require("codecompanion.adapters").extend("anthropic", {
-              env = {
+              env ={
                 api_key ="ANTHROPIC_API_KEY",
               }
             })
@@ -52,7 +53,6 @@ return {
       vim.keymap.set({"n", "v"}, "<leader>ait", "<cmd>CodeCompanionChat Toggle<CR>", { desc = "CodeCompanion Chat Toggle" })
       vim.keymap.set({"n", "v"}, "<leader>aii", "<cmd>CodeCompanion<CR>", { desc = "CodeCompanion" })
       vim.keymap.set("v", "<leader>aie", ":<C-u>'<,'>CodeCompanion /explain<CR>", { desc="CodeCompanion Explain selection"})
-        
       vim.keymap.set("v", "<leader>aicm", ":<C-u>'<,'>CodeCompanion /commit<CR>", { desc="CodeCompanion Generate commit message for selected code."})
       vim.keymap.set("v", "<leader>aif", ":<C-u>'<,'>CodeCompanion /fix<CR>", { desc="CodeCompanion fix the selected code."})
 
